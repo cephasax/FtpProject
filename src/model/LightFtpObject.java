@@ -26,6 +26,7 @@ import java.util.ArrayList;
  * @author Cephas Barreto
  *
  */
+
 public class LightFtpObject implements Serializable{
 
 	private ArrayList<String> arquivos;

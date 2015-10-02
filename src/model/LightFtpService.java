@@ -133,6 +133,10 @@ public class LightFtpService {
 		
 	}
 	
+	/*
+ 	 * Metodo usado para mostrar os arquivos existentes em uma pasta definida pelo cliente
+ 	 * 
+ 	 */
 	private void mostraListaArquivosCliente(LightFtpObject lfo){
 		System.out.println();
 		System.out.println("Arquivos disponiveis para envio:");
@@ -149,15 +153,11 @@ public class LightFtpService {
 	public void setLfo(LightFtpObject lfo) {
 		this.lfo = lfo;
 	}
-
-
 	
 	public String getDiretorio() {
 		return diretorio;
 	}
 
-
-	
 	public void setDiretorio(String diretorio) {
 		this.diretorio = diretorio;
 	}
