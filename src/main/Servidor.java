@@ -9,6 +9,30 @@ import java.net.Socket;
 import model.LightFtpObject;
 import model.LightFtpService;
 
+
+/**
+ * Servidor TCP que utiliza os servicos providos por
+ * um objeto da Classe LightFtpService para troca de
+ * mensagens com um cliente de forma adequada e definida
+ * 
+ * Cada cliente ou servidor possui um objeto da classe
+ * LightFtpService e define para ele o endereco do diretorio
+ * onde serao armazenados os arquivos recebidos
+ * 
+ * A instancia local de LightFtpService mantera o diretorio 
+ * fixo escolhido para o cliente e para o servidor de forma
+ * individual e armazenara a instancia atual do objeto LightFtpObject(Lfo)
+ * 
+ * O serviço é possivel pela troca de objetos Lfo entre cliente
+ * e servidor, se forma continuada. O objeto Lfo mais recentemente
+ * recebido substitui o anterior(seja no servidor ou cliente) e entao 
+ * acoes sao escolhidas mediante os atributos constantes na instancia mais
+ * nova do lfo. As acoes modificam essa instancia e enviam-na de volta ou
+ * aguardam informações(cliente) para outras medidas.
+ * 
+ * @author Cephas Barreto
+ *
+ */
 public class Servidor {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
